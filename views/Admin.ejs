@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | My Choice</title>
+    <link rel="stylesheet" href="/css/Admin.css">
+</head>
+
+<body>
+     <% console.log(Product) %> 
+
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="logo-apple"></ion-icon>
+                        </span>
+                        <span class="title">My Choice</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/admin">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/users">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Customers</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Messages</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="img/t1.jfif" alt="">
+                </div>
+            </div>
+
+            
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">Daily Views</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">dishes sold</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <i class="fa-solid fa-plate"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">284</div>
+                        <div class="cardName">Comments</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">$7,842</div>
+                        <div class="cardName">Earning</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Recent Orders</h2>
+                        <a href="/add-product" class="btn">Ajout</a>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Id</td>
+                                <td>Product_Name</td>
+                                <td>Product_Surname</td>
+                                <td>Description</td>
+                                <td>Product_Image</td>
+                                <td>Quantity</td>
+                                <td>country</td>
+                                <td>category_id</td>
+                                <td>Price</td>
+                                <td>Create_at</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                         <% Product.forEach(product => { %>
+                          
+                       
+                            <tr>
+                                <td><%= product.id %></td>
+                                <td><%= product.product_name %></td>>
+                                <td><%= product.product_surname %></td>
+                                <td><%= product.description %></td>
+                                <td><%= product.image_name %></td>
+                                <td><%= product.quantity %></td>
+                                <td><%= product.country %></td>
+                                <td><%= product.category_id %></td>
+                                <td><%= product.price %></td>
+                                <td></td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+
+                
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Recent Products</h2>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/Plat Chinois/Aiguillettes de canard.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Aiguillettes de canard <br> <span>Chine</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/Plats Francais/blanquette-de-veau.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>blanquette de veau <br> <span>France</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/Plat Camerounais/Capitaine Braise.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Capitaine Braise <br> <span>Cameroun</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/Plats Francais/boeuf-bourguignon02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Boeuf Bourguignon <br> <span>France</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/Plat Chinois/Boulettes de porc braisées en sauce.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Boulettes de porc braisées en sauce <br> <span>Chine</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/Plat Chinois/Canard Laqué de Pékin.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Canard Laqué de Pékin <br> <span>Chine</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/Plat Camerounais/Mbongo.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Mbongo <br> <span>Cameroun</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/Plats Francais/carbonnade-modif-1.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Carbonnade <br> <span>France</span></h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="js/Admin.js"></script>
+    <script src="/database.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

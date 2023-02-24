@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Choice</title>
+    <link rel="stylesheet" href="/css/Style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><span>my Choice</span></a>
+        <div class="menutoggle" onclick="toggleMenu();"></div>
+        <ul class="navbar">
+            <li><a href="/" onclick="toggleMenu();">Accueil</a></li>
+            <li><a href="#apropos" onclick="toggleMenu();">A propos De Nous</a></li>
+            <li><a href="#menu" onclick="toggleMenu();">Menu</a></li>
+            <li><a href="#expert" onclick="toggleMenu();">Experts</a></li>
+            <li><a href="#temoignage" onclick="toggleMenu();">Temoignages</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Commentaire</a></li>
+            <a href="/reservation" class="button">Reservation</a>
+        </ul>
+        <div class="btn-menu">
+           <img src="img/menu-bars.png" id="menuopen" alt="">
+           <img src="img/close.png" id="menuclose" alt="">  
+        </div>
+        
+        <img src="img/icons/svgs/solid/user.svg" id="user-img" alt="">
+        <div class="login-logout-popup hide">
+            <p class="account-info">Log in as, name</p>
+            <button id="user-btn">Log out</button>
+            </div>
+    </header>
+    <section class="banniere" id="banniere">
+        <div class="contenu">
+            <p>bienvenue sur my choice</p>
+            <a href="/menu" class="btn">Notre Menu</a>
+        </div>
+    </section>
+
+    <section class="apropos" id="apropos">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titre-texte"><span>A</span> Propos De Nous </h2>
+                <p>Le Food Palace est un restaurant qui propose des plateaux de fruits de mer des differents continent, elle a été créée en 2003.
+                    Aujourd’hui, notre chef vous propose une cuisine traditionnelle raffinée, élaborée avec des produits frais, de saison dans un décor feutré, en plein cœur du 15ème arrondissement de Paris. 
+                    Une grande terrasse vous accueille en été et en hiver tout au long de la journée.Le Food Palace a le plaisir de vous proposer une large sélection de plats et de boisson des differents continents, servis sur place ou à emporter.
+                    Dégustez-les chez nous avec un verre de vin ou une coupe de Champagne dans une ambiance décontractée et chic. Choisissez une de nos compositions ou créez votre propre plateau, notre écailler sera ravi de vous conseiller.
+                     </p>
+            </div>
+            <div class="col50">
+                <div class="img">
+                    <img src="/img/restaurant-ordering.jpg" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <div class="titre">
+            <h2 class="titre-texte"><span>M</span>ENU </h2>
+            <p>Menu du Jour!!!</p>
+        </div>
+        <div class="contenu">
+            <div class="box">
+                <div class="imbox">
+                    <img src="img/Plats Francais/carbonnade-modif-1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>carbonnade</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="img/Plats Francais/boeuf-bourguignon02.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>boeuf bourguignon</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="img/Plats Francais/cassoulet-modif-1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>cassoulet</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="img/Plats Francais/escargot-persillé-modif.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>escargot au beurre persillé</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="img/Plats Francais/foie-gras-modif.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>foie gras</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="img/Plats Francais/fondue-bourguignonne-620x465.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>fondue bourguignonne</h3>
+                </div>
+            </div>
+        </div>
+</div>
+<div class="titre">
+    <a href="/menu" class="btn">Voir Plus</a>
+</div>
+    </section>
+
+    <section class="expert" id="expert">
+        <div class="titre">
+            <h2 class="titre-texte">Nos <span>E</span>xpert </h2>
+            <p>Nos equipes sont constituer des meilleurs cuisinier en termes d'expertise.</p>
+        </div>
+        <div class="contenu">
+            <div class="box">
+                <div class="imbox">
+                    <img src="img/Chef Anto.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Chef Anto</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="img/Chef Christian Abegan.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>chef Christian Abegan</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="img/Chef Loïc Dablé.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Chef Loic Dablé</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="img/Chef Mory Sacko.jpeg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Chef Mory Sacko</h3>
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+
+<section class="temoignage" id="temoignage">
+    <div class="titre blanc">
+        <h2 class="titre-texte">Que Disent Nos<span>C</span>ients </h2>
+        <p>Texte descriptif du restaurant</p>
+    </div>
+    <div class="contenu">
+        <div class="box">
+            <div class="imbox">
+                <img src="img/t1.jfif" alt="">
+            </div>
+            <div class="text">
+                <p>J'ai visiter cette endroit par pure curiosite et le ne regrette pas.
+                    les repas qui y sont preparer son fais avec le plus grand soin et le gout est meilleurs.
+                    l'Accueil y ait chaleureux avec des serveuses qui sont en plus d'etre belle elles sont aussi courtoises.
+                    Je vous invite a y passer si vous avez du temps un jour.
+                </p>
+                <h3>Chef Anto</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="img/t2.jpg" alt="">
+            </div>
+            <div class="text">
+                <p>J'ai visiter cette endroit par pure curiosite et le ne regrette pas.
+                    les repas qui y sont preparer son fais avec le plus grand soin et le gout est meilleurs.
+                    l'Accueil y ait chaleureux avec des serveuses qui sont en plus d'etre belle elles sont aussi courtoises.
+                    Je vous invite a y passer si vous avez du temps un jour.</p>
+                <h3>chef Christian Abegan</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="img/t3.jpg" alt="">
+            </div>
+            <div class="text">
+                <p>J'ai visiter cette endroit par pure curiosite et le ne regrette pas.
+                    les repas qui y sont preparer son fais avec le plus grand soin et le gout est meilleurs.
+                    l'Accueil y ait chaleureux avec des serveuses qui sont en plus d'etre belle elles sont aussi courtoises.
+                    Je vous invite a y passer si vous avez du temps un jour.</p>
+                <h3>Chef Loic Dablé</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="titre-noir">
+        <h2 class="titre-text"><span>C</span>ommentaire</h2>
+        <p>Veuillez laissez un Commentaire</p>
+    </div>
+    <div class="contactform">
+        <h3>Envoyer un Message</h3>
+        <div class="inputboite">
+            <input type="text" placeholder="Nom" id="nom" required>
+        </div>
+        <div class="inputboite">
+            <input type="text" placeholder="Email" id="email"required>
+        </div>
+        <div class="inputboite">
+            <textarea placeholder="message" id="message"required></textarea>
+        </div>
+        <div class="inputboite">
+            <a href="mailto:wilstore237@gmail.com" class="submit" type="button">Envoyer</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <a href="#" class="logo"><span>my choice</span></a>
+    </div>
+    <p class="footer-title">© mychoice</p>
+    <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, at minima. At quibusdam ducimus maxime eius totam doloremque. Maiores vero repellat, excepturi sequi iusto odit et eveniet iste rerum officiis quae explicabo ipsum tempore dolorum enim consectetur? Amet totam incidunt quod doloribus earum iste fugiat culpa obcaecati ut officiis consectetur nemo, quam nulla deleniti, veritatis excepturi cupiditate numquam minus dignissimos ullam atque odio. Veritatis a ea natus culpa facere sunt, ab rerum provident quam officia animi minima exercitationem sit aliquam corporis pariatur! Eum perspiciatis vel labore odio blanditiis tenetur eaque repellendus accusamus cum, eos rerum cumque magni similique exercitationem dignissimos ullam aliquid. Error amet dolorum similique sed optio nihil pariatur repudiandae enim reprehenderit mollitia iure, omnis harum molestias magnam autem iste iusto animi doloremque? Esse facilis eius odit, repudiandae ex iusto, quaerat nulla nisi enim sit libero ab recusandae magni expedita, sapiente ducimus qui. Fugit sequi amet deleniti dignissimos officia eum eaque odio eius excepturi. Excepturi harum enim quibusdam obcaecati quos sit corporis, vero, dolores explicabo officiis odit non quam. Vitae repellat perferendis laborum provident, fugiat consectetur voluptatem vel voluptatum.</p>
+   <p class="info">supports</p>
+    <p class="info"><i class="fa-solid fa-envelope"></i><a href="#" class="info">mychoice.com</a></p>
+   <p class="info"><i class="fa-brands fa-whatsapp"></i><a href="#" class="info">xxx-xxx-xxx</a></p>
+   <div class="footer-social-container">
+    <div>
+        <a href="#" class="social-link">terms & services</a>
+        <a href="#" class="social-link">privacy page</a>
+    </div>
+    <div>
+        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i>Instagram</a>
+        <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i>Facebook</a>
+        <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i>Twitter</a>
+    </div>
+   </div>
+   <p class="footer-credit">copyright 2022 <a href="#"><span>WilDesign</span></a>, tous  droits resersés</p>
+</footer>
+
+<script src="js/Script.js"></script>
+</body>
+</html>

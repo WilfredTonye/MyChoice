@@ -1,0 +1,577 @@
+@import url(../assets/fontawesome/css/all.css);
+:root{
+    /*color*/
+    --main-color: #f00;
+    --hover-color: #920b0b;
+    --sub-color: #fff;
+    /*Typoograpy*/
+    --font-family:"Edwardian Script ITC";
+    --subtitle: "Times New Roman", serif;
+    --sub-font-family:"Poppins", sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-weight: 300;
+    color: #111;
+}
+
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.logo{
+    font-family: var(--font-family);
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.logo span{
+    color: var(--main-color);
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+}
+
+.navbar li{
+    list-style: none;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+}
+
+.button{
+    padding: 10px 20px;
+    background: var(--main-color);
+    margin-top: -10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: white;
+    font-family: serif;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: var(--hover-color);
+    transition: ease-in-out;
+}
+
+.overlay{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.plate-overlay{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.popup{
+    margin: 10% auto;
+    width: 70%;
+    background: url(../img/f6eb1398-fce7-43b5-b18e-b9e56b27d9e4.JPG) center no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 15px 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 3em;
+}
+
+.plate-popup{
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 15px 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 3em;
+    z-index: 1;
+    outline: none;
+}
+
+.plate-title{
+    text-align: center;
+    color: black;
+}
+
+.plate-title p{
+    text-align: center;
+}
+
+.fa-x{
+    color: #111;
+}
+
+#closepopup{
+    float: right;
+    cursor: pointer;
+    margin-top: -60px;
+    margin-right: -30px;
+}
+
+.popup-title{
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.popup-item{
+    display: block;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 8px;
+    border: none;
+}
+
+#add-btn{
+    float: right;
+    margin-top: -32px;
+    cursor: pointer;
+}
+
+input::placeholder{
+    color: black;
+    text-transform: capitalize;
+}
+
+.opt{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    padding: 8px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.btn-valider{
+    padding: 10px 20px;
+    background: var(--main-color);
+    margin-top: 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-family: serif;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+header .navbar li a:hover{
+    color: var(--main-color);
+    border-bottom: 2px solid #ED5914;
+}
+
+body{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+header.sticky{
+    background: white;
+    padding: 10px 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header.sticky .logo{
+    color: black;
+}
+
+header.sticky .navbar li a {
+    color: black;
+}
+
+header.sticky li a:hover{
+    color: var(--main-color);
+    border-bottom: 2px solid #ED5914;
+    text-decoration: none; 
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    background: black;
+    border-radius: 10px;
+    color: white;
+    font-family: serif;
+    text-transform: capitalize;
+    display: flex;
+    box-shadow: 0 70px 63px -60px black;
+    margin-bottom: 100px;
+    transition: all .8s;
+    cursor: pointer;
+}
+
+.border{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.border:hover{
+    border: 1px solid white;
+}
+
+.icons{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    height: 100px;
+    width: 50px;
+    top: 50px;
+}
+
+h3{
+    color: var(--main-color);
+    text-transform: capitalize;
+}
+
+.card h2 {
+    margin: 20px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.card:hover h2{
+    opacity: 1;
+}
+
+.pays{
+    opacity: 0;
+    transition: all 1s;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+}
+.card:hover .pays {
+    opacity: 1;
+}
+
+.card0{
+    background: url(../img/Plats\ Francais/blanquette-de-veau.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card0:hover{
+    background: url(../img/Plats\ Francais/blanquette-de-veau.jpg) left center;
+    background-size: 600px;
+}
+
+.card1{
+    background: url(../img/Plats\ Francais/boeuf-bourguignon02.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card1:hover{
+    background: url(../img/Plats\ Francais/boeuf-bourguignon02.jpg) left center;
+    background-size: 600px;
+}
+
+.card2{
+    background: url(../img/Plats\ Francais/bouillabaisse-1.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card2:hover{
+    background: url(../img/Plats\ Francais/bouillabaisse-1.jpg) left center;
+    background-size: 600px;
+}
+
+.card3{
+    background: url(../img/Plats\ Francais/carbonnade-modif-1.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card3:hover{
+    background: url(../img/Plats\ Francais/carbonnade-modif-1.jpg) left center;
+    background-size: 600px;
+}
+
+.card4{
+    background: url(../img/Plats\ Francais/cassoulet-modif-1.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card4:hover{
+    background: url(../img/Plats\ Francais/cassoulet-modif-1.jpg) left center;
+    background-size: 600px;
+}
+
+.card5{
+    background: url(../img/Plats\ Francais/escargot-persillé-modif.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card5:hover{
+    background: url(../img/Plats\ Francais/escargot-persillé-modif.jpg) left center;
+    background-size: 600px;
+}
+
+.card6{
+    background: url(../img/Plats\ Francais/foie-gras-modif.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card6:hover{
+    background: url(../img/Plats\ Francais/foie-gras-modif.jpg) left center;
+    background-size: 600px;
+}
+
+.card7{
+    background: url(../img/Plats\ Francais/fondue-bourguignonne-620x465.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card7:hover{
+    background: url(../img/Plats\ Francais/fondue-bourguignonne-620x465.jpg) left center;
+    background-size: 600px;
+}
+
+.card8{
+    background: url(../img/Plats\ Francais/fondue-savoyarde.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card8:hover{
+    background: url(../img/Plats\ Francais/fondue-savoyarde.jpg) left center;
+    background-size: 600px;
+}
+
+.card9{
+    background: url(../img/Plats\ Francais/galette-bretonne.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card9:hover{
+    background: url(../img/Plats\ Francais/galette-bretonne.jpg) left center;
+    background-size: 600px;
+}
+
+.card10{
+    background: url(../img/Plats\ Francais/Gratin_dauphinois.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card10:hover{
+    background: url(../img/Plats\ Francais/Gratin_dauphinois.jpg) left center;
+    background-size: 600px;
+}
+
+.card11{
+    background: url(../img/Plats\ Francais/huîtres.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card11:hover{
+    background: url(../img/Plats\ Francais/huîtres.jpg) left center;
+    background-size: 600px;
+}
+
+.card12{
+    background: url(../img/Plats\ Francais/mouclade-charentaise.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card12:hover{
+    background: url(../img/Plats\ Francais/mouclade-charentaise.jpg) left center;
+    background-size: 600px;
+}
+
+.card13{
+    background: url(../img/Plats\ Francais/Poulet_basquaise.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card13:hover{
+    background: url(../img/Plats\ Francais/Poulet_basquaise.jpg) left center;
+    background-size: 600px;
+}
+
+.card14{
+    background: url(../img/Plats\ Francais/Quiche_lorraine_01.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card14:hover{
+    background: url(../img/Plats\ Francais/Quiche_lorraine_01.jpg) left center;
+    background-size: 600px;
+}
+
+.card15{
+    background: url(../img/Plats\ Francais/raclette.png) center center no-repeat;
+    background-size: 300px;
+}
+
+.card15:hover{
+    background: url(../img/Plats\ Francais/raclette.png) left center;
+    background-size: 600px;
+}
+
+.card16{
+    background: url(../img/Plats\ Francais/ratatouille-620x465.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card16:hover{
+    background: url(../img/Plats\ Francais/ratatouille-620x465.jpg) left center;
+    background-size: 600px;
+}
+
+.card17{
+    background: url(../img/Plats\ Francais/tartiflette.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card17:hover{
+    background: url(../img/Plats\ Francais/tartiflette.jpg) left center;
+    background-size: 600px;
+}
+
+.card18{
+    background: url(../img/Plats\ Francais/Absinthe.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card18:hover{
+    background: url(../img/Plats\ Francais/Absinthe.jpg) left center;
+    background-size: 600px;
+}
+
+.card19{
+    background: url(../img/Plats\ Francais/bouteille-picon-bière.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card19:hover{
+    background: url(../img/Plats\ Francais/bouteille-picon-bière.jpg) left center;
+    background-size: 600px;
+}
+
+.card20{
+    background: url(../img/Plats\ Francais/Calvados.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card20:hover{
+    background: url(../img/Plats\ Francais/Calvados.jpg) left center;
+    background-size: 600px;
+}
+
+.card21{
+    background: url(../img/Plats\ Francais/Chartreuse.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card21:hover{
+    background: url(../img/Plats\ Francais/Chartreuse.jpg) left center;
+    background-size: 600px;
+}
+
+.card22{
+    background: url(../img/Plats\ Francais/Cidre.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card22:hover{
+    background: url(../img/Plats\ Francais/Cidre.jpg) left center;
+    background-size: 600px;
+}
+
+.card23{
+    background: url(../img/Plats\ Francais/cognac.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card23:hover{
+    background: url(../img/Plats\ Francais/cognac.jpg) left center;
+    background-size: 600px;
+}
+
+.card24{
+    background: url(../img/Plats\ Francais/cointreau.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card24:hover{
+    background: url(../img/Plats\ Francais/cointreau.jpg) left center;
+    background-size: 600px;
+}
+
+.card25{
+    background: url(../img/Plats\ Francais/jacqueline.jpeg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card25:hover{
+    background: url(../img/Plats\ Francais/jacqueline.jpeg) left center;
+    background-size: 600px;
+}
+
+.card26{
+    background: url(../img/Plats\ Francais/Kir.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card26:hover{
+    background: url(../img/Plats\ Francais/Kir.jpg) left center;
+    background-size: 600px;
+}
+
+.card27{
+    background: url(../img/Plats\ Francais/Kirsch.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card27:hover{
+    background: url(../img/Plats\ Francais/Kirsch.jpg) left center;
+    background-size: 600px;
+}
+
+.card28{
+    background: url(../img/Plats\ Francais/Le/pastis.jpg) center center no-repeat;
+    background-size: 300px;
+}
+
+.card28:hover{
+    background: url(./ratatouille-620x465.jpg) left center;
+    background-size: 600px;
+}

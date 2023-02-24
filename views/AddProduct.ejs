@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="icon" href="./img/light-logo.png">
+    <link rel="stylesheet" href="css/Signup.css">
+    <link rel="stylesheet" href="css/AddProduct.css">
+</head>
+<body>
+
+
+    <img src="img/loader.gif" alt="" class="loader">
+    <div class="alert-box">
+        <img src="./img/error.png" class="alert-img" alt="">
+        <p class="alert-msg">error message</p>
+    </div>
+
+    <img src="img/Logo.png" alt="" class="logo">
+    <div class="form">
+        <input type="text" name="title" id="product-name" placeholder="product-name">
+        <input type="text" name="title" id="short-des" placeholder="short line about the product">
+        <textarea id="des" name="title" placeholder="detail description"></textarea>
+
+        <!-- product image-->
+        <div class="product-info">
+            <div class="product-image"><p class="text">product image</p></div>
+            <div class="upload-image-sec">
+                <!-- upload inputs-->
+                <p class="text"><img src="img/camera.png" alt="">upload image</p>
+                <div class="upload-catalouge">
+                    <form action="/add-product/upload" enctype="multipart/form-data" method="post">
+                        <div>File: <input class="test" type="file" name="someExpressFiles" multiple="multiple" /></div>
+                        <input class="test" type="submit" value="Upload" />
+                      </form>
+                </div>
+            </div>
+            <div class="select-sizes">
+                <p class="text">categories</p>
+                <div class="sizes">
+                    <input type="checkbox" class="size-checkbox" id="xs" value="entrees">
+                    <input type="checkbox" class="size-checkbox" id="s" value="Desserts">
+                    <input type="checkbox" class="size-checkbox" id="m" value="Déjeuners">
+                    <input type="checkbox" class="size-checkbox" id="l" value="Soupe">
+                    <input type="checkbox" class="size-checkbox" id="xl" value="Brunch">
+                    <input type="checkbox" class="size-checkbox" id="xxl" value="Potage">
+                </div>
+            </div>
+        </div>
+        <div class="product-price">
+            <input type="number" id="actual-price" placeholder="prix d'achat">
+            <input type="number" id="discount" placeholder="pourcentage de reduction">
+            <input type="number" id="sell-price" placeholder="prix de vente">
+        </div>
+
+        <input type="number" id="stock" min="20" placeholder="item in stock">
+
+        <textarea id="tags" placeholder="Enter categories here, for example - Men, Jeans, Blue Jeans, Rough Jeans (you should add men or women at start)"></textarea>
+
+        <input type="checkbox" class="checkbox" id="tac" checked>
+        <label for="tac">WilStore take 30% from your total sell</label>
+
+        <div class="buttons">
+            <button class="btn" id="add-btn">add product</button>
+            <button class="btn" id="save-btn">save draft</button>
+        </div>
+    </div>
+
+<script src="js/token.js"></script>
+<script src="js/AddProduct.js"></script>
+
+
+</body>
+</html>

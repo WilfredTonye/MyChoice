@@ -1,0 +1,170 @@
+:root{
+    /*color*/
+    --main-color: #f00;
+    --hover-color: #920b0b;
+    --sub-color: #fff;
+    /*Typoograpy*/
+    --font-family:"Edwardian Script ITC";
+    --subtitle: "Times New Roman", serif;
+    --sub-font-family:"Poppins", sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+p{
+    font-weight: 300;
+    color: white;
+}
+
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.logo{
+    font-family: var(--font-family);
+    color: white;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.logo span{
+    color: var(--main-color);
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+}
+
+.navbar li{
+    list-style: none;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+}
+
+header .navbar li a:hover{
+    color: var(--main-color);
+    border-bottom: 2px solid #92360b;
+}
+
+.banner{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0 , 0.5) rgba(0, 0, 0, 0.5));
+    background-image: url(../img/restaurant-ordering.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: 420px 420px;
+}
+.card-img{
+    background-image: url(../img/r2.jpg);
+    background-size: cover;
+}
+
+.banner h2{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.card-content{
+    background:white;
+    height: 330px;
+}
+.card-content h3{
+    text-align: center;
+    color: black;
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.form-row{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+form select, form input{
+    display: block;
+    width: 90%;
+    margin: 15px 15px;
+    padding: 5px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    font-weight: 300;
+}
+
+form input[type="text"], form input[type="number"], form input::placeholder,select{
+    color: #9a9a9a;
+}
+
+form input[type="submit"]{
+    color: white;
+    background: var(--main-color);
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+form input[type="submit"]:hover{
+    color: var(--hover-color);
+}
+@media(max-width:992px){
+    .card-container{
+        grid-template-columns: 100%;
+    }
+    .card-img{
+        height: 330px;
+    }
+}
+ 
+
+header.sticky{
+    background: white;
+    padding: 10px 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header.sticky .logo{
+    color: black;
+}
+
+header.sticky .navbar li a {
+    color: black;
+}
+
+header.sticky li a:hover{
+    color: var(--main-color);
+    border-bottom: 2px solid #92360b;   
+}

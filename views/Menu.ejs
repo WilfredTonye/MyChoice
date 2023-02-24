@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Choice | Menu</title>
+    <link rel="stylesheet" href="/css/Style.css">
+    <link rel="stylesheet" href="/css/Menu.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><span>M</span>enu</a>
+        <ul class="navbar">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/reservation">Reservation</a></li>
+            <button class="button" id="openpopup">commande</button>
+        </ul>
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <form action="#" class="popup-form">
+                    <h2 class="popup-title">passer votre commande</h2>
+                    <i class="fa-solid fa-times" id="closepopup"></i>
+                    <input type="text" id="nom-plat" class="popup-item" placeholder="nom du plat">
+                    <i class="fa-solid fa-add" id="add-btn"></i>
+                    <input type="text" id="nom-boisson" class="popup-item hide" placeholder="nom de la boisson">
+                    <select name="choix du pays" id="" class="opt">
+                        <option value="choix du pays">choix du pays</option>
+                        <option value="Cameroun">cameroun</option>
+                        <option value="Chine">chine</option>
+                        <option value="France">france</option>
+                    </select>
+                    <input type="number" id="number" class="popup-item" placeholder="nombre de persone">
+                    <input type="text" id="prix" class="popup-item" placeholder="prix">
+                </form>
+                <button class="btn-valider">valider</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="card card0">
+        <div class="border">
+            <h2>blanquette de veau</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+        <div class="plate-overlay">
+            <div class="plate-popup" id="plate-popup">
+                <h1 class="plate-title">nom du plat</h1>
+                <p>surnom du plat</p>
+                <i class="fa-solid fa-x" id="closepopup-plate"></i>
+                <div class="plate-box">
+                    <div class="plate-imbox">
+                        <img src="img/Plats Francais/blanquette-de-veau.jpg" alt="plat1">
+                    </div>
+                </div>
+                <div class="plate-des">
+                    <div class="plate-col50">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat at omnis incidunt officiis mollitia officia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card1">
+        <div class="border">
+            <h2>boeuf bourguignon</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:3000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card2">
+        <div class="border">
+            <h2>bouillabaisse</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card3">
+        <div class="border">
+            <h2>carbonnade</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:2800F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card4">
+        <div class="border">
+            <h2>cassoulet</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:3750F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card5">
+        <div class="border">
+            <h2>escargot au beurre persillé</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card6">
+        <div class="border">
+            <h2>foie gras</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:2000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card7">
+        <div class="border">
+            <h2>fondue bourguignonne</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5500F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card8">
+        <div class="border">
+            <h2>fondue savoyarde</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:4500F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card9">
+        <div class="border">
+            <h2>galette bretonne</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:4500F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card10">
+        <div class="border">
+            <h2>gratin dauphinois</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card11">
+        <div class="border">
+            <h2>huitre</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:4750F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card12">
+        <div class="border">
+            <h2>mouclade charentaise</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:4500F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card13">
+        <div class="border">
+            <h2>Poulet basquaise</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:4000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card14">
+        <div class="border">
+            <h2>quiche lorraine</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card15">
+        <div class="border">
+            <h2>raclette</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card16">
+        <div class="border">
+            <h2>ratatouille</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card17">
+        <div class="border">
+            <h2>tartiflette</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card18">
+        <div class="border">
+            <h2>absinthe</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card19">
+        <div class="border">
+            <h2>bouteille picon</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card20">
+        <div class="border">
+            <h2>calvados</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card21">
+        <div class="border">
+            <h2>chartreuse</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card22">
+        <div class="border">
+            <h2>cidre</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card23">
+        <div class="border">
+            <h2>cognac</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card24">
+        <div class="border">
+            <h2>cointreau</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card25">
+        <div class="border">
+            <h2>jacqueline</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card26">
+        <div class="border">
+            <h2>kir</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card27">
+        <div class="border">
+            <h2>kirsch</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card28">
+        <div class="border">
+            <h2>le pastis</h2>
+            <div class="icons">
+                <h3 class="pays prix">Pays:France</h3>
+                <h3 class="pays prix">Prix:5000F</h3>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="logo"><span>my choice</span></a>
+        </div>
+        <p class="footer-title">© my choice</p>
+        <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, at minima. At quibusdam ducimus maxime eius totam doloremque. Maiores vero repellat, excepturi sequi iusto odit et eveniet iste rerum officiis quae explicabo ipsum tempore dolorum enim consectetur? Amet totam incidunt quod doloribus earum iste fugiat culpa obcaecati ut officiis consectetur nemo, quam nulla deleniti, veritatis excepturi cupiditate numquam minus dignissimos ullam atque odio. Veritatis a ea natus culpa facere sunt, ab rerum provident quam officia animi minima exercitationem sit aliquam corporis pariatur! Eum perspiciatis vel labore odio blanditiis tenetur eaque repellendus accusamus cum, eos rerum cumque magni similique exercitationem dignissimos ullam aliquid. Error amet dolorum similique sed optio nihil pariatur repudiandae enim reprehenderit mollitia iure, omnis harum molestias magnam autem iste iusto animi doloremque? Esse facilis eius odit, repudiandae ex iusto, quaerat nulla nisi enim sit libero ab recusandae magni expedita, sapiente ducimus qui. Fugit sequi amet deleniti dignissimos officia eum eaque odio eius excepturi. Excepturi harum enim quibusdam obcaecati quos sit corporis, vero, dolores explicabo officiis odit non quam. Vitae repellat perferendis laborum provident, fugiat consectetur voluptatem vel voluptatum.</p>
+       <p class="info">supports</p>
+        <p class="info"><i class="fa-solid fa-envelope"></i><a href="#" class="info">mychoice.com</a></p>
+       <p class="info"><i class="fa-brands fa-whatsapp"></i><a href="#" class="info">xxx-xxx-xxx</a></p>
+       <div class="footer-social-container">
+        <div>
+            <a href="#" class="social-link">terms & services</a>
+            <a href="#" class="social-link">privacy page</a>
+        </div>
+        <div>
+            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i>instagram</a>
+            <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i>facebook</a>
+            <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i>twitter</a>
+        </div>
+       </div>
+       <p class="footer-credit">copyright 2022 <a href="#"><span>WilDesign</span></a>, tous  droits resersés</p>
+    </footer>
+
+    <script type="text/javascript">
+    
+        window.addEventListener('scroll', function(){
+            const header=document.querySelector('header');
+            header.classList.toggle( "sticky", window.scrollY > 0 );
+        });
+</script>
+
+<script src="js/Menu.js"></script>
+
+</body>
+</html>

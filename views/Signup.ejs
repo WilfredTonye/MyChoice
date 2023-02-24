@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un Compte</title>
+    <link rel="stylesheet" href="./css/Signup.css">
+</head>
+<body>
+    <img src="./img/loader.gif" class="loader" alt="">
+
+    <div class="alert-box">
+        <img src="./img/error.png" class="alert-img" alt="">
+        <p class="alert-msg">error message</p>
+    </div>
+
+    <div class="container">
+        <img src="..." class="logo" alt="">
+        <div>
+            <input type="text" autocomplete="off" id="name" placeholder="nom">
+            <input type="email" autocomplete="off" id="email" placeholder="email">
+            <input type="password" autocomplete="off" id="password" placeholder="mot de passe">
+            <input type="text" autocomplete="off" id="number" placeholder="numéro de téléphone">
+            <input type="checkbox" checked class="checkbox" id="terms-and-cond">
+            <label for="terms-and-cond">accepter nous <a href="#">terms and conditions</a></label>
+            <button class="submit-btn">s'Enregistrer</button>
+        </div>
+        <a href="/login" class="link">vous avez déjà un compte? connectez-vous ici</a>
+    </div>
+
+    <script src="./js/form.js"></script>
+    <script src="./js/token.js"></script>
+</body>
+</html>

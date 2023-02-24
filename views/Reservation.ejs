@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Choice | Reservation</title>
+    <link rel="stylesheet" href="/css/Style.css">
+    <link rel="stylesheet" href="/css/Reservation.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><span>R</span>eservation</a>
+        <ul class="navbar">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/menu">Menu</a></li>
+        </ul>
+    </header>
+    <section class="banner">
+        <h2>RESERVER MAINTENANT</h2>
+        <div class="card-container">
+            <div class="card-img">
+                <img src="" alt="">
+            </div>
+            <div class="card-content">
+                <h3>Reservation</h3>
+                <form>
+                    <div>
+                        <select name="days">
+                            <option value="day-select">Jour</option>
+                            <option value="dimanche">dimanche</option>
+                            <option value="Lundi">Lundi</option>
+                            <option value="Mardi">Mardi</option>
+                            <option value="Mercredi">Mercredi</option>
+                            <option value="Jeudi">Jeudi</option>
+                            <option value="Vendredi">Vendredi</option>
+                            <option value="Samedi">Samedi</option>
+                        </select>
+                        <select name="hours">
+                            <option value="hours-select">heure</option>
+                            <option value="dimanche">10:00</option>
+                            <option value="Lundi">12:00</option>
+                            <option value="Mardi">14:00</option>
+                            <option value="Mercredi">16:00</option>
+                            <option value="Jeudi">18:00</option>
+                            <option value="Vendredi">20:00</option>
+                            <option value="Samedi">22:00</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Nom Complet" id="nom">
+                        <input type="text" placeholder="Numero de Telephone" id="tel">
+                    </div>
+                    <div class="form-row">
+                        <input type="number" placeholder="Combien de personnes?" id="number">
+                        <input type="submit" value="reserver">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="logo"><span>my choice</span></a>
+        </div>
+        <p class="footer-title">© my choice</p>
+        <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, at minima. At quibusdam ducimus maxime eius totam doloremque. Maiores vero repellat, excepturi sequi iusto odit et eveniet iste rerum officiis quae explicabo ipsum tempore dolorum enim consectetur? Amet totam incidunt quod doloribus earum iste fugiat culpa obcaecati ut officiis consectetur nemo, quam nulla deleniti, veritatis excepturi cupiditate numquam minus dignissimos ullam atque odio. Veritatis a ea natus culpa facere sunt, ab rerum provident quam officia animi minima exercitationem sit aliquam corporis pariatur! Eum perspiciatis vel labore odio blanditiis tenetur eaque repellendus accusamus cum, eos rerum cumque magni similique exercitationem dignissimos ullam aliquid. Error amet dolorum similique sed optio nihil pariatur repudiandae enim reprehenderit mollitia iure, omnis harum molestias magnam autem iste iusto animi doloremque? Esse facilis eius odit, repudiandae ex iusto, quaerat nulla nisi enim sit libero ab recusandae magni expedita, sapiente ducimus qui. Fugit sequi amet deleniti dignissimos officia eum eaque odio eius excepturi. Excepturi harum enim quibusdam obcaecati quos sit corporis, vero, dolores explicabo officiis odit non quam. Vitae repellat perferendis laborum provident, fugiat consectetur voluptatem vel voluptatum.</p>
+       <p class="info">supports</p>
+        <p class="info"><i class="fa-solid fa-envelope"></i><a href="#" class="info">mychoice.com</a></p>
+       <p class="info"><i class="fa-brands fa-whatsapp"></i><a href="#" class="info">xxx-xxx-xxx</a></p>
+       <div class="footer-social-container">
+        <div>
+            <a href="#" class="social-link">terms & services</a>
+            <a href="#" class="social-link">privacy page</a>
+        </div>
+        <div>
+            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i>instagram</a>
+            <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i>facebook</a>
+            <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i>twitter</a>
+        </div>
+       </div>
+       <p class="footer-credit">copyright 2022 <a href="#"><span>WilDesign</span></a>, tous  droits resersés</p>
+    </footer>
+    <script type="text/javascript">
+    
+        window.addEventListener('scroll', function(){
+            const header=document.querySelector('header');
+            header.classList.toggle( "sticky", window.scrollY > 0 );
+        });
+</script>    
+</body>
+</html>

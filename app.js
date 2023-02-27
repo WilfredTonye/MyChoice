@@ -1,19 +1,18 @@
-var express = require("express");
-var app = express();
+const express = require("express");
+const app = express();
+const morgan = require('morgan')
+const users = require('./database/Sequelize-Users')
+const products = require('./database/Sequelize-Product')
+const {product} =require('./database/Sequelize-Product')
+const category = require('./database/Sequelize-Categories');
+const Product = require("./models/Product");
 
 app.set("view engine", "ejs");
-const knex = require('knex')({
-    client: 'pg',
-    connection: {
-      host : '127.0.0.1',
-      port : 5432,
-      user : 'postgres',
-      password : '123456789',
-      database : 'mychoice'
-    },
-  });
 
-  app.use(express.static(__dirname + '/Public'))
+  app
+  .use(express.static(__dirname + '/Public'))
+  .use(morgan('dev'))
+  
   //routes
 //home route
 app.get('/', (req,res) => {    
@@ -34,33 +33,29 @@ app.get('/signup', (req,res) => {
 
 //admin route
 app.get('/admin', (req,res) => {
-    knex
-    .select()
-    .from("Product")
-    .then((results) =>{
-    res.render("Admin", {Product: results})
+    product.findAll()
+    .then(_ => console.log('les produuits ont ete trouves'))
+      res.render("Admin", {product})
 })
-});
+
+
 
 //add-prduct route
 app.get('/add-product', (req,res) => {
-    knex
-    .select()
-    .from("Product")
-    .then((results) =>{
-    res.render("AddProduct", {Product: results})
-})
+    res.render("AddProduct")
 });
+
+//edit-prduct route
+app.get('/edit-product', (req,res) => {
+    res.render("EditProduct")
+})
 
 //customers route
 app.get('/users', (req,res) => {
-    knex
-    .select()
-    .from("users")
-    .then((results) =>{
-    res.render("Customers", {Users: results})
+    res.render("Customers")
 })
-});
+
+
 
 //menu route
 app.get('/menu', (req,res) => {

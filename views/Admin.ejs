@@ -10,7 +10,7 @@
 </head>
 
 <body>
-     <% console.log(Product) %> 
+     
 
     <div class="container">
         <div class="navigation">
@@ -45,9 +45,9 @@
                 <li>
                     <a href="#">
                         <span class="icon">
-                            <ion-icon name="chatbubble-outline"></ion-icon>
+                            <ion-icon name="user-outline"></ion-icon>
                         </span>
-                        <span class="title">Messages</span>
+                        <span class="title">Profile</span>
                     </a>
                 </li>
 
@@ -159,8 +159,8 @@
             <div class="details">
                 <div class="recentOrders">
                     <div class="cardHeader">
-                        <h2>Recent Orders</h2>
-                        <a href="/add-product" class="btn">Ajout</a>
+                        <h2>Recent Adding</h2>
+                        <a href="/add-product" class="btn">New</a>
                     </div>
 
                     <table>
@@ -173,29 +173,33 @@
                                 <td>Product_Image</td>
                                 <td>Quantity</td>
                                 <td>country</td>
-                                <td>category_id</td>
+                                <td>category_name</td>
+                                <td>category_type</td>
                                 <td>Price</td>
-                                <td>Create_at</td>
+                                <td>Created_at</td>
+                                <td>Option</td>
                             </tr>
                         </thead>
 
                         <tbody>
-                         <% Product.forEach(product => { %>
+                       
                           
                        
                             <tr>
-                                <td><%= product.id %></td>
-                                <td><%= product.product_name %></td>>
-                                <td><%= product.product_surname %></td>
-                                <td><%= product.description %></td>
-                                <td><%= product.image_name %></td>
-                                <td><%= product.quantity %></td>
-                                <td><%= product.country %></td>
-                                <td><%= product.category_id %></td>
-                                <td><%= product.price %></td>
                                 <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="/edit-product"><i class="fa fa-edit"></i></a><a href="#"><i class="fa fa-trash"></i></a></td>
                             </tr>
-                            <% }) %>
+                           
                         </tbody>
                     </table>
                 </div>

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Product</title>
+    <title>Edit Product</title>
     <link rel="icon" href="./img/light-logo.png">
     <link rel="stylesheet" href="css/Signup.css">
     <link rel="stylesheet" href="css/AddProduct.css">
 </head>
 <body>
       <% console.log(Categories)  %>
-      <form action="/add-product/upload" enctype="multipart/form-data" method="post">
+      <form action="/add-product" enctype="multipart/form-data" method="post">
     <img src="img/loader.gif" alt="" class="loader">
     <div class="alert-box">
         <img src="./img/error.png" class="alert-img" alt="">
@@ -32,7 +32,7 @@
                 <p class="text"><img src="img/camera.png" alt="">upload image</p>
                 <div class="upload-catalouge">
                    
-                        <div>File: <input class="test" type="file" name="someExpressFiles" multiple="multiple" /></div>
+                        <div> <input class="test" type="file" name="someExpressFiles" multiple="multiple" /></div>
                        
                       
                 </div>
@@ -53,11 +53,7 @@
             <input type="number" id="discount" placeholder="pourcentage de reduction">
             <input type="number" id="sell-price" placeholder="prix de vente">
         </div>
-        <% Product.forEach(product => { %>>
-        <input type="number" id="stock" min="20" placeholder="<%= product.quantity %>">
-        <input type="number" id="stock" min="20" placeholder="<%= product.price %>">
-        <% }) %>
-<
+
         <div class="buttons">
             <button class="btn" id="add-btn">add product</button>
             <button class="btn" id="save-btn">save draft</button>

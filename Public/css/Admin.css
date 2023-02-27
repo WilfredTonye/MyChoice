@@ -90,6 +90,15 @@ body {
   font-size: 1.75rem;
 }
 
+.fa{
+  color: var(--main-color);
+  margin-left: 10px;
+}
+
+.fa:hover{
+  color: var(--sub-color);
+}
+
 .navigation ul li a .title {
   position: relative;
   display: block;

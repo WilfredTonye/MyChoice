@@ -1,5 +1,16 @@
-module.exports = (Sequelize, DataTypes) =>{
-  return Sequelize.define('Product', {
+const { Sequelize, DataTypes, where } = require('sequelize');
+const { Category } = require('./Categories');
+
+const sequelize = new Sequelize('mychoice', 'postgres', '123456789', {
+  host: 'localhost',
+  dialect: 'postgres'
+});
+
+ sequelize.authenticate()
+ .then(_ =>console.log(" connexion reussi"))
+ .catch(error => console.log(`impossible de se connecter ${error}`))
+
+  const Product = sequelize.define('Product', {
     id:{
       type:DataTypes.INTEGER,
       primaryKey: true,
@@ -7,36 +18,40 @@ module.exports = (Sequelize, DataTypes) =>{
     },
     product_name:{
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull:false
     },
     product_surname:{
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull:true
     },
     description:{
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull:false
     },
     product_image:{
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull:true
     },
     quantity:{
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull:false
     },
     country:{
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull:false
     },
     price:{
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull:false
     }
   }, {
       timestamps: true,
       createdAt: 'created',
-      updatedAt: true
+      updatedAt: false
 
   })
+
+  //sequelize.sync({force: true})
+module.exports ={
+  Product,where
 }

@@ -4,23 +4,15 @@ const sequelize = new Sequelize('mychoice', 'postgres', '123456789', {
   host: 'localhost',
   dialect: 'postgres'
 });
-const Category = sequelize.define('Categorie', {
+const Country = sequelize.define('Countrie', {
     id:{
       type:DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
-    category_name:{
+    country_name:{
       type: DataTypes.STRING,
-      allowNull: false,
-      validate:{
-        notEmpty:"Le nom d'une categorie ne peut pas etre vide",
-        notNull:"Ce champ est obligatoire, Veuillez le renseigner!"
-      }
-    },
-    category_type:{
-      type: DataTypes.STRING,
-      allowNull: true
+      allowNull: false
     }
   }, {
       timestamps: false,
@@ -30,5 +22,5 @@ const Category = sequelize.define('Categorie', {
   })
   // sequelize.sync({force: true})
 module.exports = {
-  Category
+  Country
 }

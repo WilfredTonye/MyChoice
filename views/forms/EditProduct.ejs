@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Product</title>
     <link rel="icon" href="./img/light-logo.png">
-    <link rel="stylesheet" href="css/Signup.css">
-    <link rel="stylesheet" href="css/AddProduct.css">
+    <link rel="stylesheet" href="/css/Signup.css">
+    <link rel="stylesheet" href="/css/AddProduct.css">
 </head>
 <body>
-      <% console.log(Categories)  %>
-      <form action="/add-product" enctype="multipart/form-data" method="post">
+
+    <% console.log(Product) %>
+    
+      <form action="/admin/<%= Product.id %>/edit" method="POST">
     <img src="img/loader.gif" alt="" class="loader">
     <div class="alert-box">
         <img src="./img/error.png" class="alert-img" alt="">
@@ -20,9 +22,9 @@
 
     <img src="img/Logo.png" alt="" class="logo">
     <div class="form">
-        <input type="text" name="title" id="product-name" placeholder="product-name">
-        <input type="text" name="title" id="short-des" placeholder="short line about the product">
-        <textarea id="des" name="title" placeholder="detail description"></textarea>
+        <input type="text" name="product_name" id="product_name" placeholder="<%= Product.product_name %>"/>
+        <input type="text" name="product_surname" id="product_surname" placeholder="<%= Product.product_surname %>"/>
+        <input type="text" name="description" id="description" placeholder="<%= Product.description %>"/>
 
         <!-- product image-->
         <div class="product-info">
@@ -41,27 +43,25 @@
                 <p class="text">categories</p>
                
                 <div class="sizes">
-                    <% Categories.forEach(category => { %>
-                    <input type="checkbox" class="size-checkbox" id="xs" value="<%= category.category_name %>">
-                    <% }) %>
+              
+                    <input type="checkbox" class="size-checkbox" id="xs" value="">
+                    
                 </div>
                 
             </div>
         </div>
-        <div class="product-price">
-            <input type="number" id="actual-price" placeholder="prix d'achat">
-            <input type="number" id="discount" placeholder="pourcentage de reduction">
-            <input type="number" id="sell-price" placeholder="prix de vente">
-        </div>
+
+        <input type="number" name="quantity" id="quantity" placeholder="<%= Product.quantity %>"/>
+        <input type="text" name="country" id="country" placeholder="<%= Product.country %>"/>
+        <input type="number" name="price" id="price" placeholder="<%= Product.price %>"/>
 
         <div class="buttons">
-            <button class="btn" id="add-btn">add product</button>
+            <button class="btn" id="add-btn">save changes</button>
             <button class="btn" id="save-btn">save draft</button>
         </div>
     </div>
 </form>
 <script src="js/token.js"></script>
-<script src="js/AddProduct.js"></script>
 
 
 </body>

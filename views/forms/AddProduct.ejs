@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product</title>
     <link rel="icon" href="./img/light-logo.png">
-    <link rel="stylesheet" href="css/Signup.css">
-    <link rel="stylesheet" href="css/AddProduct.css">
+    <link rel="stylesheet" href="/css/Signup.css">
+    <link rel="stylesheet" href="/css/AddProduct.css">
 </head>
 <body>
-      <% console.log(Categories)  %>
-      <form action="/add-product/upload" enctype="multipart/form-data" method="post">
+  <form action="/create" method="post">
     <img src="img/loader.gif" alt="" class="loader">
     <div class="alert-box">
         <img src="./img/error.png" class="alert-img" alt="">
@@ -20,9 +19,11 @@
 
     <img src="img/Logo.png" alt="" class="logo">
     <div class="form">
-        <input type="text" name="title" id="product-name" placeholder="product-name">
-        <input type="text" name="title" id="short-des" placeholder="short line about the product">
-        <textarea id="des" name="title" placeholder="detail description"></textarea>
+        <input type="text" name="product_name" id="product_name" placeholder="Nom du Produit"/>
+        <input type="text" name="product_surname" id="product_surname" placeholder="Surnom"/>
+        <input type="text" name="description" id="description" placeholder="description"/>
+
+        
 
         <!-- product image-->
         <div class="product-info">
@@ -31,9 +32,9 @@
                 <!-- upload inputs-->
                 <p class="text"><img src="img/camera.png" alt="">upload image</p>
                 <div class="upload-catalouge">
-                   
-                        <div>File: <input class="test" type="file" name="someExpressFiles" multiple="multiple" /></div>
-                       
+                    <form action="/create" method="post" enctype="multipart/form-data">
+                        <div>File: <input type="file" name="someExpressFiles" multiple="multiple" /></div>
+                 
                       
                 </div>
             </div>
@@ -41,25 +42,22 @@
                 <p class="text">categories</p>
                
                 <div class="sizes">
-                    <% Categories.forEach(category => { %>
-                    <input type="checkbox" class="size-checkbox" id="xs" value="<%= category.category_name %>">
+                           <% Categories.forEach(Categorie => { %>
+                            
+                    <input type="checkbox" class="size-checkbox" id="xs" value="<%= Categorie.category_name %>">
                     <% }) %>
                 </div>
                 
             </div>
         </div>
-        <div class="product-price">
-            <input type="number" id="actual-price" placeholder="prix d'achat">
-            <input type="number" id="discount" placeholder="pourcentage de reduction">
-            <input type="number" id="sell-price" placeholder="prix de vente">
-        </div>
-        <% Product.forEach(product => { %>>
-        <input type="number" id="stock" min="20" placeholder="<%= product.quantity %>">
-        <input type="number" id="stock" min="20" placeholder="<%= product.price %>">
-        <% }) %>
-<
+        
+        <input type="number" name="quantity" id="quantity" placeholder="quantity"/>
+        <input type="text" name="country" id="country" placeholder="country"/>
+        <input type="number" name="price" id="price" placeholder="price"/>
+       
+
         <div class="buttons">
-            <button class="btn" id="add-btn">add product</button>
+            <button type="submit" class="btn">add product</button>
             <button class="btn" id="save-btn">save draft</button>
         </div>
     </div>

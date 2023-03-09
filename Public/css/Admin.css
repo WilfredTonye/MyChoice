@@ -109,6 +109,18 @@ body {
   white-space: nowrap;
 }
 
+.Title{
+  font-family: var(--font-family);
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  font-size: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+  cursor: pointer;
+}
 .navigation ul li:hover a::before,
 .navigation ul li.hovered a::before {
   content: "";

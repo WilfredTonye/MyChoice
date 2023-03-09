@@ -1,5 +1,11 @@
-module.exports = (Sequelize, DataTypes) =>{
-  return Sequelize.define('User', {
+const { Sequelize, DataTypes } = require('sequelize');
+
+const sequelize = new Sequelize('mychoice', 'postgres', '123456789', {
+  host: 'localhost',
+  dialect: 'postgres'
+});
+
+   const User = sequelize.define('User', {
     id:{
       type:DataTypes.INTEGER,
       primaryKey: true,
@@ -31,4 +37,7 @@ module.exports = (Sequelize, DataTypes) =>{
       updatedAt: false
 
   })
-}
+ //sequelize.sync({force: true})
+  module.exports ={
+    User
+  }

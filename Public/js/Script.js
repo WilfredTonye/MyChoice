@@ -22,6 +22,20 @@
         Navbar.style.display = 'none';
     })
 
+    //search popup
+    const searchOverlay = document.querySelector('.search-overlay');
+    const searchPopup = document.querySelector('.search-popup');
+    const searchBtn = document.querySelector('#search-btn');
+    const searchClose = document.querySelector('#close');
+
+    searchBtn.addEventListener('click', () => {
+        searchOverlay.style.display = 'block';
+    })
+    
+    searchClose.addEventListener('click', () => {
+        searchOverlay.style.display = 'none';
+    })
+
 // nav popup
 const userImageButton = document.querySelector('#user-img');
 const userPopup = document.querySelector('.login-logout-popup');

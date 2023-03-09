@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Choice</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/Style.css">
 </head>
 <body>
@@ -26,6 +27,17 @@
         </div>
         
         <a href="/admin"><img src="img/icons/svgs/solid/user.svg" id="user-img" alt=""></a>
+        <div class="search">
+            <i class="fa-solid fa-search" id="search-btn"></i>
+            <div class="search-overlay" id="search-overlay">
+                <div class="search-popup">
+                    <i class="fa-solid fa-times" id="close"></i>
+                    <form action="#" method="post">
+                        <input type="search" placeholder="search here">
+                    </form>
+                </div>
+            </div>
+        </div>
     </header>
     <section class="banniere" id="banniere">
         <div class="contenu">
@@ -246,6 +258,7 @@
    <p class="footer-credit">copyright 2022 <a href="#"><span>WilDesign</span></a>, tous  droits resersés</p>
 </footer>
 
-<script src="js/Script.js"></script>
+<script src="/js/Script.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

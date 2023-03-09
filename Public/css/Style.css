@@ -32,7 +32,7 @@ header img{
     position: relative;
     width: 30px;
     right: 60px;
-    top: -5px;
+    top: -15px;
     cursor: pointer;
 }
 
@@ -109,19 +109,13 @@ header img{
 
 .search-popup{
     margin: 10% auto;
-    width: 14%;
-    background: var(--sub-color);
+    width: 50%;
     background-size: cover;
     border-radius: 5px;
     box-shadow: 15px 20px 0 rgba(0, 0, 0, 0.1);
     padding: 1em;
 }
 
-.search-popup input{
-    background: var(--sub-color);
-    border: none;
-    width: 200px;
-}
 
 .search-popup input::placeholder{
     color: #a9a9a9;

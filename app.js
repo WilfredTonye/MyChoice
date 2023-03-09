@@ -7,7 +7,7 @@ var morgan = require('morgan');
 const { Product, where } = require("./models/Product");
 const { Category } = require("./models/Categories");
 const { Country } = require("./models/Country");
-const { UniqueConstraintError } = require("sequelize");
+const { UniqueConstraintError, Op } = require("sequelize");
 
 app.set("view engine", "ejs") 
 
@@ -53,6 +53,22 @@ app.get('/create', (req,res) => {
     })
     .catch(error => res.status(400).json({message:error.message}))
 });
+
+//search route
+app.post('/search',(req,res)=> {
+        let product_name = req.body.product_name;
+        Product.findAndCountAll({
+            where:{
+                product_name: {
+                    [Op.like]:`%${product_name}%`
+                }
+            }
+        })
+        .then(({count,rows}) => {
+            res.render("Search",{count, rows})
+        })
+        .catch(error => res.status(400).json({message: error.message}))
+})
 
 app.post('/create',async(req,res) => {
     let product_name = req.body.product_name
